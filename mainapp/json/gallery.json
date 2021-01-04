@@ -1,0 +1,277 @@
+[
+  {
+    "product": "ASSASSIN'S CREED: Rogue",
+    "is_main": true,
+    "image": "product_images/71-ivm-50-pp-7-l-sl-1273-1024-x-1024-2-x.png"
+  },
+  {
+    "product": "ASSASSIN'S CREED: Rogue",
+    "is_main": false,
+    "image": "product_images/acrr-01-big-cinematic-new-york-321742.png"
+  },
+  {
+    "product": "ASSASSIN'S CREED: Rogue",
+    "is_main": false,
+    "image": "product_images/acchd-09-sailing-sunset-by-village-3217363x.png"
+  },
+  {
+    "product": "ASSASSIN'S CREED: Rogue",
+    "is_main": false,
+    "image": "product_images/acchd-03-parkour-on-log-3217243x.png"
+  },
+  {
+    "product": "ASSASSIN'S CREED: Rogue",
+    "is_main": false,
+    "image": "product_images/acchd-05-sailing-sunset-village-3217303x.png"
+  },
+  {
+    "product": "Tomb Raider",
+    "is_main": true,
+    "image": "product_images/51-k-8-ff-z-39-a-l.png"
+  },
+  {
+    "product": "Tomb Raider",
+    "is_main": false,
+    "image": "product_images/tomb_raider1.jpg"
+  },
+  {
+    "product": "Tomb Raider",
+    "is_main": false,
+    "image": "product_images/tomb_raider2.jpg"
+  },
+  {
+    "product": "Tomb Raider",
+    "is_main": false,
+    "image": "product_images/tomb_raider3.jpg"
+  },
+  {
+    "product": "Tomb Raider",
+    "is_main": false,
+    "image": "product_images/tomb_raider4.jpg"
+  },
+  {
+    "product": "Ryse: Son Of Rome",
+    "is_main": true,
+    "image": "product_images/fc-0-fe-7-ba-3-b-8-e-092-e-2-ae-941-b-054852-d-47.png"
+  },
+  {
+    "product": "Ryse: Son Of Rome",
+    "is_main": false,
+    "image": "product_images/ryse1.jpg"
+  },
+  {
+    "product": "Ryse: Son Of Rome",
+    "is_main": false,
+    "image": "product_images/ryse2.jpg"
+  },
+  {
+    "product": "Ryse: Son Of Rome",
+    "is_main": false,
+    "image": "product_images/ryse3.jpg"
+  },
+  {
+    "product": "Ryse: Son Of Rome",
+    "is_main": false,
+    "image": "product_images/ryse4.jpg"
+  },
+  {
+    "product": "World Of Warcraft: Wrath Of The Linch King",
+    "is_main": true,
+    "image": "product_images/91-fv-ox-ym-fn-l.png"
+  },
+  {
+    "product": "World Of Warcraft: Wrath Of The Linch King",
+    "is_main": false,
+    "image": "product_images/wow1.jpg"
+  },
+  {
+    "product": "World Of Warcraft: Wrath Of The Linch King",
+    "is_main": false,
+    "image": "product_images/wow2.jpg"
+  },
+  {
+    "product": "World Of Warcraft: Wrath Of The Linch King",
+    "is_main": false,
+    "image": "product_images/wow3.jpg"
+  },
+  {
+    "product": "World Of Warcraft: Wrath Of The Linch King",
+    "is_main": false,
+    "image": "product_images/wow4.jpg"
+  },
+  {
+    "product": "BATTLEFIELD 1",
+    "is_main": true,
+    "image": "product_images/71-h-xk-6-m-9-l-sy-606.png"
+  },
+  {
+    "product": "BATTLEFIELD 1",
+    "is_main": false,
+    "image": "product_images/bf11.jpg"
+  },
+  {
+    "product": "BATTLEFIELD 1",
+    "is_main": false,
+    "image": "product_images/bf12.jpg"
+  },
+  {
+    "product": "BATTLEFIELD 1",
+    "is_main": false,
+    "image": "product_images/bf13.jpg"
+  },
+  {
+    "product": "BATTLEFIELD 1",
+    "is_main": false,
+    "image": "product_images/bf14.jpg"
+  },
+  {
+    "product": "STAR WARS: Battlefront II",
+    "is_main": true,
+    "image": "product_images/71-v-3-s-nj-wt-rl-sy-450.png"
+  },
+  {
+    "product": "STAR WARS: Battlefront II",
+    "is_main": false,
+    "image": "product_images/swb1.jpg"
+  },
+  {
+    "product": "STAR WARS: Battlefront II",
+    "is_main": false,
+    "image": "product_images/swb2.jpg"
+  },
+  {
+    "product": "STAR WARS: Battlefront II",
+    "is_main": false,
+    "image": "product_images/swb3.jpg"
+  },
+  {
+    "product": "STAR WARS: Battlefront II",
+    "is_main": false,
+    "image": "product_images/swb4.jpg"
+  },
+  {
+    "product": "BATTLEFIELD 4",
+    "is_main": true,
+    "image": "product_images/81-vnxn-cj-fe-l-sy-606.png"
+  },
+  {
+    "product": "BATTLEFIELD 4",
+    "is_main": false,
+    "image": "product_images/bf41.jpg"
+  },
+  {
+    "product": "BATTLEFIELD 4",
+    "is_main": false,
+    "image": "product_images/bf42.jpg"
+  },
+  {
+    "product": "BATTLEFIELD 4",
+    "is_main": false,
+    "image": "product_images/bf43.jpg"
+  },
+  {
+    "product": "BATTLEFIELD 4",
+    "is_main": false,
+    "image": "product_images/bf44.jpg"
+  },
+  {
+    "product": "WORLD OF TANKS",
+    "is_main": true,
+    "image": "product_images/1500209931-world-of-tanks-trojka-is-t-34-i-su-152.png"
+  },
+  {
+    "product": "WORLD OF TANKS",
+    "is_main": false,
+    "image": "product_images/wot1.jpg"
+  },
+  {
+    "product": "WORLD OF TANKS",
+    "is_main": false,
+    "image": "product_images/wot2.jpg"
+  },
+  {
+    "product": "WORLD OF TANKS",
+    "is_main": false,
+    "image": "product_images/wot3.jpg"
+  },
+  {
+    "product": "WORLD OF TANKS",
+    "is_main": false,
+    "image": "product_images/wot4.jpg"
+  },
+  {
+    "product": "FOR HONOR",
+    "is_main": true,
+    "image": "product_images/mv-5-bzg-yx-mg-jm-mt-ut-ywu-3-yy-00-mt-rj-lw-jl-zg-it-ot-jh-njhm-nt-nl-mti-1-xk-ey-xk-fqc-gde-qx-vy-mtm-1-n-tkz-ota-v-1-uy-268-cr-44-0-182-268-al.png"
+  },
+  {
+    "product": "FOR HONOR",
+    "is_main": false,
+    "image": "product_images/fh1.jpg"
+  },
+  {
+    "product": "FOR HONOR",
+    "is_main": false,
+    "image": "product_images/fh2.jpg"
+  },
+  {
+    "product": "FOR HONOR",
+    "is_main": false,
+    "image": "product_images/fh3.jpg"
+  },
+  {
+    "product": "FOR HONOR",
+    "is_main": false,
+    "image": "product_images/fh4.jpg"
+  },
+  {
+    "product": "WORLD OF WARSHIPS",
+    "is_main": true,
+    "image": "product_images/world-of-warships.png"
+  },
+  {
+    "product": "WORLD OF WARSHIPS",
+    "is_main": false,
+    "image": "product_images/wows1.jpg"
+  },
+  {
+    "product": "WORLD OF WARSHIPS",
+    "is_main": false,
+    "image": "product_images/wows2.jpg"
+  },
+  {
+    "product": "WORLD OF WARSHIPS",
+    "is_main": false,
+    "image": "product_images/wows3.jpg"
+  },
+  {
+    "product": "WORLD OF WARSHIPS",
+    "is_main": false,
+    "image": "product_images/wows4.jpg"
+  },
+  {
+    "product": "CALL OF DUTY: Infinite Warfare",
+    "is_main": true,
+    "image": "product_images/51-p-1-z-v-mzq-3-l.png"
+  },
+  {
+    "product": "CALL OF DUTY: Infinite Warfare",
+    "is_main": false,
+    "image": "product_images/codi1.jpg"
+  },
+  {
+    "product": "CALL OF DUTY: Infinite Warfare",
+    "is_main": false,
+    "image": "product_images/codi2.jpg"
+  },
+  {
+    "product": "CALL OF DUTY: Infinite Warfare",
+    "is_main": false,
+    "image": "product_images/codi3.jpg"
+  },
+  {
+    "product": "CALL OF DUTY: Infinite Warfare",
+    "is_main": false,
+    "image": "product_images/codi4.jpg"
+  }
+]

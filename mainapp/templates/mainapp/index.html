@@ -1,0 +1,314 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="starting-div">
+        {% include 'mainapp/includes/inc_starting_search.html' %}
+        <div class="starting-menu">
+            <ul>
+                <li> <a href="{% url 'main' %}">Home</a> </li>
+                <li> <a href="#">About</a> </li>
+                <li> <a href="#">Services</a> </li>
+                <li> <a href="{% url 'catalog' %}">Gallery</a> </li>
+                <li> <a href="#">News</a> </li>
+                <li> <a href="#">Team</a> </li>
+                <li> <a href="{% url 'contacts' %}">Contact Us</a> </li>
+            </ul>
+        </div>
+        <div class="starting-text">
+            <div class="starting-header">
+                <p>Nunc eget nibh</p>
+            </div>
+            <div class="underline">
+                <p></p>
+            </div>
+            <div class="starting-content"> Morbi in nisl auctor </div>
+            <div class="starting-icons">
+                <a href="#"><img class="facebook" src="{% static 'img/facebook-logo.png' %}" alt=""></a>
+                <a href="#"><img class="twitter" src="{% static 'img/twitter-logo-silhouette.png' %}" alt=""></a>
+                <a href="#"><img class="rss" src="{% static 'img/rss-feed-suscription-button-symbol-for-interface.png' %}" alt=""></a>
+                <a href="#"><img class="vk" src="{% static 'img/vk-social-network-logo.png' %}" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="about-us">
+        <div class="about-main">
+            <div class="about-content">
+                <p class="red-header">About Us!</p>
+                <p class="about-text"> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                    <br>
+                    <br> Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+            </div>
+        </div>
+        <div class="about-image"> <img src="{% static 'img/1.png' %}" alt=""> </div>
+    </div>
+    <div class="services">
+        <p class="red-header">Services</p>
+        <div class="services-content">
+            <div class="services-items">
+                <div class="services-left-item">
+                    <div class="services-item-content">
+                        <p class="services-header"> Repreh Qui In Ea Voluptate </p>
+                        <br>
+                        <p class="services-text"> Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. </p>
+                    </div>
+                    <div class="services-icon"> <img src="{% static 'img/%D0%B2%D0%B5%D1%82%D0%BA%D0%B0.png' %}" alt=""> </div>
+                </div>
+                <div class="services-right-item">
+                    <div class="services-icon"> <img src="{% static 'img/arrow-up-bold-circle-outline.png' %}" alt=""> </div>
+                    <div class="services-item-content">
+                        <p class="services-header"> Voluptatibus Maiores Alias </p>
+                        <br>
+                        <p class="services-text"> Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-items">
+                <div class="services-left-item">
+                    <div class="services-item-content">
+                        <p class="services-header"> Aut Perferendis Doloribus </p>
+                        <br>
+                        <p class="services-text"> Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. </p>
+                    </div>
+                    <div class="services-icon"> <img src="{% static 'img/%D0%B2%D0%B5%D1%82%D0%BA%D0%B0.png' %}" alt=""> </div>
+                </div>
+                <div class="services-right-item">
+                    <div class="services-icon"> <img src="{% static 'img/arrow-up-bold-circle-outline.png' %}" alt=""> </div>
+                    <div class="services-item-content">
+                        <p class="services-header"> Dut Aut Reiciendis Maiores </p>
+                        <br>
+                        <p class="services-text"> Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-items">
+                <div class="services-left-item">
+                    <div class="services-item-content">
+                        <p class="services-header"> Maiores Alias Consequatur </p>
+                        <br>
+                        <p class="services-text"> Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. </p>
+                    </div>
+                    <div class="services-icon"> <img src="{% static 'img/%D0%B2%D0%B5%D1%82%D0%BA%D0%B0.png' %}" alt=""> </div>
+                </div>
+                <div class="services-right-item">
+                    <div class="services-icon"> <img src="{% static 'img/arrow-up-bold-circle-outline.png' %}" alt=""> </div>
+                    <div class="services-item-content">
+                        <p class="services-header"> Doloribus Volupta Maiores </p>
+                        <br>
+                        <p class="services-text"> Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="gallery-header">
+            <div class="red-header"> Our Gallery </div>
+        </div>
+        <div class="gallery-products-main">
+            <div class="gallery-item"> <img src="{% static 'img/71-ivm-50-pp-7-l-sl-1273-1024-x-1024-2-x.png' %}" alt="">
+                <div class="div-product-name">
+                    <p class="product-name">Assasin’s Creed: Rogue </p>
+                    <div class="buy-button"> <a href="{% url 'product' %}" class="gallery-buy-button"> Buy</a> </div>
+                </div>
+            </div>
+            <div class="gallery-item"> <img src="{% static 'img/51-k-8-ff-z-39-a-l.png' %}" alt="">
+                <div class="div-product-name">
+                    <p class="product-name">Tomb Raider </p>
+                    <div class="buy-button"> <a href="{% url 'product' %}" class="gallery-buy-button"> Buy</a> </div>
+                </div>
+            </div>
+            <div class="gallery-item"> <img src="{% static 'img/fc-0-fe-7-ba-3-b-8-e-092-e-2-ae-941-b-054852-d-47.png' %}" alt="">
+                <div class="div-product-name">
+                    <p class="product-name">Ryse: Son Of Rome </p>
+                    <div class="buy-button"> <a href="{% url 'product' %}" class="gallery-buy-button"> Buy</a> </div>
+                </div>
+            </div>
+            <div class="gallery-item"> <img src="{% static 'img/91-fv-ox-ym-fn-l.png' %}" alt="">
+                <div class="div-product-name">
+                    <p class="product-name">World Of Warcraft: Wrath Of The Linch King </p>
+                    <div class="buy-button"> <a href="{% url 'product' %}" class="gallery-buy-button"> Buy</a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="quote">
+        <div class="quote-header">
+            <p>Testimonial</p>
+        </div>
+        <div class="quote-icon"> <img src="{% static 'img/2.png' %}" alt=""> </div>
+        <div class="quote-content">
+            <a href="#" class="arrow-left"><img src="{% static 'img/left-arrow.png' %}" alt=""></a>
+            <div class="quote-text"> Donec feugiat tellus sem, laoreet iaculis orci lobortis vel. Sed sed luctus orci, at lacinia risus. Ut porttitor ante ac tincidunt elementum. Curabitur ex dolor, condimentum vitae nunc vel, pulvinar semper justo. Vestibulum et aliquet magna, maximus dapibus enim. Vestibulum ex lectus, posuere eu viverra at, mattis et enim. Nam efficitur sem et lectus fringilla, at pharetra nulla luctus. Nunc cursus, augue ac ultricies volutpat, neque erat congue justo, ac pretium tellus eros a neque. Integer ipsum sem, consectetur a mollis ac, cursus eu ipsum. </div>
+            <a href="#" class="arrow-right"><img src="{% static 'img/right-arrow.png' %}" alt=""></a>
+        </div>
+        <div class="quote-signature">
+            <p> JOHN SMITH </p>
+            <p> - FOUNDER</p>
+        </div>
+    </div>
+    <div class="news-events">
+        <div class="news-events-header">News & Events</div>
+        <div class="news-events-content">
+            <div class="latest-news">
+                <div class="latest-news-header">
+                    <p>Latest News</p>
+                </div>
+                <div class="latest-news-content">
+                    <div class="latest-news-content-date">
+                        <p class="latest-news-content-date-day">15</p>
+                        <p class="latest-news-content-date-month"> June </p>
+                        <p class="latest-news-content-date-year"> 2016 </p>
+                    </div>
+                    <div class="latest-news-content-text">
+                        <div class="latest-news-content-text-header">
+                            <p>Fugiat Quo Voluptas</p>
+                        </div>
+                        <div class="latest-news-content-text-info">
+                            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.</p>
+                        </div>
+                    </div>
+                    <div class="latest-news-content-date">
+                        <p class="latest-news-content-date-day">18</p>
+                        <p class="latest-news-content-date-month"> June </p>
+                        <p class="latest-news-content-date-year"> 2016 </p>
+                    </div>
+                    <div class="latest-news-content-text">
+                        <div class="latest-news-content-text-header">
+                            <p>Fugiat Quo Voluptas</p>
+                        </div>
+                        <div class="latest-news-content-text-info">
+                            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.</p>
+                        </div>
+                    </div>
+                    <div class="latest-news-content-date">
+                        <p class="latest-news-content-date-day">20</p>
+                        <p class="latest-news-content-date-month"> June </p>
+                        <p class="latest-news-content-date-year"> 2016 </p>
+                    </div>
+                    <div class="latest-news-content-text">
+                        <div class="latest-news-content-text-header">
+                            <p>Fugiat Quo Voluptas</p>
+                        </div>
+                        <div class="latest-news-content-text-info">
+                            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-events">
+                <div class="featured-events-header">
+                    <div>Featured Events</div>
+                    <div class="featured-events-header-buttons"> <a href="#"><i class="fas fa-chevron-left"></i></a> <a href="#"><i class="fas fa-chevron-right"></i></a> </div>
+                </div>
+                <div class="featured-events-images"> <img src="{% static 'img/g-7.png' %}" alt=""> <img src="{% static 'img/g-9.png' %}" alt=""> <img src="{% static 'img/g-3.png' %}" alt=""> </div>
+                <div class="featured-events-collapse">
+                    <div class="collapse-item">
+                        <div class="collapse-item-header">
+                            <button class="collapse-button"> <strong><span class="collapse-icon">-</span> Assumenda Est Cliche Reprehenderit</strong></button>
+                        </div>
+                        <div class="collapse-item-text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-item-header">
+                            <button class="collapse-button"><strong><span class="collapse-icon">+</span> Assumenda Est Cliche Reprehenderit</strong></button>
+                        </div>
+                        <div class="collapse-item-text inactive"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+                    </div>
+                    <div class="collapse-item">
+                        <div class="collapse-item-header">
+                            <button class="collapse-button"><strong><span class="collapse-icon">+</span> Assumenda Est Cliche Reprehenderit</strong></button>
+                        </div>
+                        <div class="collapse-item-text inactive"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="our-team">
+        <div class="our-team-header"> Our Team </div>
+        <div class="our-team-men">
+            <div class="our-team-men-item">
+                <div class="our-team-men-photo"><img src="{% static 'img/t-1.png' %}" alt=""></div>
+                <div class="our-team-men-name">Mary Jane</div>
+                <div class="our-team-men-desc">Vestibulum</div>
+                <div class="our-team-men-links">
+                    <a href="">
+                        <svg height="14" width="15">
+                            <image xlink:href="{% static 'img/facebook-logo.svg' %}" x="0" y="0" height="15" width="15" /> </svg>
+                    </a>
+                    <a href=""> <img src="{% static 'img/twitter-logo-silhouette.jpg' %}" alt=""> </a>
+                    <a href=""> <img src="{% static 'img/rss-feed-suscription-button-symbol-for-interface.jpg' %}" alt=""> </a>
+                    <a href="">
+                        <svg height="14" width="15">
+                            <image xlink:href="{% static 'img/vk-social-network-logo.svg' %}" x="0" y="0" height="15" width="15" /> </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="our-team-men-item">
+                <div class="our-team-men-photo"><img src="{% static 'img/t-2.png' %}" alt=""></div>
+                <div class="our-team-men-name">Peter Parker</div>
+                <div class="our-team-men-desc">Ves tibulum</div>
+                <div class="our-team-men-links">
+                    <a href="">
+                        <svg height="13" width="15">
+                            <image xlink:href="{% static 'img/facebook-logo.svg' %}" x="0" y="0" height="15" width="15" /> </svg>
+                    </a>
+                    <a href=""> <img src="{% static 'img/twitter-logo-silhouette.jpg' %}" alt=""> </a>
+                    <a href=""> <img src="{% static 'img/rss-feed-suscription-button-symbol-for-interface.jpg' %}" alt=""> </a>
+                    <a href="">
+                        <svg height="14" width="15">
+                            <image xlink:href="{% static 'img/vk-social-network-logo.svg' %}" x="0" y="0" height="15" width="15" /> </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="our-team-men-item">
+                <div class="our-team-men-photo"><img src="{% static 'img/t-3.png' %}" alt=""></div>
+                <div class="our-team-men-name">John Watson</div>
+                <div class="our-team-men-desc">Vestibulum</div>
+                <div class="our-team-men-links">
+                    <a href="">
+                        <svg height="15" width="15">
+                            <image xlink:href="{% static 'img/facebook-logo.svg' %}" x="0" y="0" height="15" width="15" /> </svg>
+                    </a>
+                    <a href=""> <img src="{% static 'img/twitter-logo-silhouette.jpg' %}" alt=""> </a>
+                    <a href=""> <img src="{% static 'img/rss-feed-suscription-button-symbol-for-interface.jpg' %}" alt=""> </a>
+                    <a href="">
+                        <svg height="15" width="15">
+                            <image xlink:href="{% static 'img/vk-social-network-logo.svg' %}" x="0" y="0" height="15" width="15" /> </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="our-team-men-item">
+                <div class="our-team-men-photo"><img src="{% static 'img/t-4.png' %}" alt=""></div>
+                <div class="our-team-men-name">Steven Wilson</div>
+                <div class="our-team-men-desc">Vestibulum</div>
+                <div class="our-team-men-links">
+                    <a href="">
+                        <svg height="13" width="15">
+                            <image xlink:href="{% static 'img/facebook-logo.svg' %}" x="0" y="0" height="15" width="15" /> </svg>
+                    </a>
+                    <a href=""> <img src="{% static 'img/twitter-logo-silhouette.jpg' %}" alt=""> </a>
+                    <a href=""> <img src="{% static 'img/rss-feed-suscription-button-symbol-for-interface.jpg' %}" alt=""> </a>
+                    <a href="">
+                        <svg height="14" width="15">
+                            <image xlink:href="{% static 'img/vk-social-network-logo.svg' %}" x="0" y="0" height="15" width="15" /> </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="subscribe">
+        <div class="subscribe-text"> Subscribe with Us </div>
+        <form action="" class="subscribe-form-flex">
+            <input type="text" placeholder="Email">
+            <input type="submit" value="Subscribe"> </form>
+    </div>
+    {% include 'mainapp/includes/inc_contacts.html' %}
+    {% include 'mainapp/includes/inc_map.html' %}
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'js/collapseMain.js' %}"></script>
+{% endblock %}

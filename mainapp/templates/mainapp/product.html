@@ -1,0 +1,259 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="starting-product">
+        {% include 'mainapp/includes/inc_starting_search.html' %}
+        {% include 'mainapp/includes/inc_starting_menu_product.html' %}
+    </div>
+    <div class="product-wrapper">
+        <div class="product-grid">
+            <div class="product-grid-big-image"> <img src="{% static 'img/acrr-01-big-cinematic-new-york-321742.png' %}" alt="" class="main-image"> </div>
+            <div class="product-grid-buy">
+                <div class="product-grid-buy-name"> Assasin’s Creed:</div>
+                <div class="product-grid-buy-subname">Rogue</div>
+                <div class="product-grid-buy-price"> $29.99 </div>
+                <div class="product-grid-buy-button">
+                    <a href="#"></a><span class="product-grid-buy-button-link">Buy</span> </div>
+            </div>
+            <div class="product-grid-images"> <img src="{% static 'img/acrr-01-big-cinematic-new-york-321742.png' %}" alt="" class="small-image active-product-image"> <img src="{% static 'img/acchd-09-sailing-sunset-by-village-321736@3x.png' %}" alt="" class="small-image"> <img src="{% static 'img/acchd-03-parkour-on-log-321724@3x.png' %}" alt="" class="small-image"> <img src="{% static 'img/acchd-05-sailing-sunset-village-321730@3x.png' %}" alt="" class="small-image"> </div>
+            <div class="product-grid-text"> The plot is&nbsp;set in&nbsp;a&nbsp;fictional history of&nbsp;real world events and follows the centuries-old struggle between the Assassins, who fight for peace with free will, and the Templars, who desire peace through control. The story is&nbsp;set in&nbsp;the mid-18th century during the Seven Years&rsquo; War, and follows Shay Patrick Cormac, an&nbsp;Assassin-turned-Templar who hunts down former members of&nbsp;his Brotherhood after being betrayed by&nbsp;them. Gameplay in&nbsp;Rogue is&nbsp;very similar to&nbsp;that of&nbsp;Black Flag with a&nbsp;mixture of&nbsp;ship-based naval exploration and third-person land-based exploration with some new features. </div>
+            <div class="product-ratings">
+                <div class="ratings-wrapper">
+                    <div class="progress-circle-div">
+                        <svg class="progress-circle-svg" width="120" height=120>
+                            <circle class="progress-circle-ring" stroke="red" stroke-width="4" cx="60" cy="60" r="52" fill="transparent"> </circle>
+                            <div class="progress-score"> 85 </div>
+                        </svg>
+                    </div>
+                    <p>Средняя оценка ведущих критиков</p>
+                </div>
+                <div class="ratings-wrapper">
+                    <div class="progress-circle-div">
+                        <svg class="progress-circle-svg" width="120" height=120>
+                            <circle class="progress-circle-part-1" stroke="red" stroke-width="4" cx="60" cy="60" r="52" fill="transparent"> </circle>
+                            <circle class="progress-circle-part-2" stroke="red" stroke-width="4" cx="60" cy="60" r="52" fill="transparent"> </circle>
+                            <circle class="progress-circle-part-3" stroke="red" stroke-width="4" cx="60" cy="60" r="52" fill="transparent"> </circle>
+                            <circle class="progress-circle-part-4" stroke="red" stroke-width="4" cx="60" cy="60" r="52" fill="transparent"> </circle>
+                            <div class="progress-score-string"> Good</div>
+                        </svg>
+                    </div>
+                    <p>Рейтинг на OpenCritic</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery-product">
+        <div class="gallery-products-main">
+            <div class="gallery-item-product">
+                <div class="card-flip-item">
+                    <div class="card-flip-item-front"> <img src="{% static 'img/81-pp-b-9-h-hu-7-l-sl-1500-1024-x-1024-2-x.png' %}" alt=""> </div>
+                    <div class="card-flip-item-back">
+                        <div class="flip-rating">
+                            <div class="flip-rating-item">
+                                <p>92</p>
+                                <p>Metacritic</p>
+                            </div>
+                            <div class="flip-rating-item">
+                                <p>92</p>
+                                <p>PC Gamer</p>
+                            </div>
+                        </div>
+                        <div class="flip-price">
+                            <p>$29.99</p>
+                        </div>
+                        <div class="flip-description">
+                            <p>The plot is set in a fictional history of real world events and follows the centuries-old struggle between the Assassins, who fight for peace with free will, and the Templars, who desire peace through control. </p>
+                        </div>
+                        <div class="flip-icons">
+                            <div class="flip-icon"><i class="fas fa-user gameIcon singleplayer"></i>
+                                <div class="icon-desc">
+                                    <div class="icon-desc-box"> <span class="tip tip-up"></span>
+                                        <p>Одиночная игра</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-icon"><i class="fas fa-user-friends gameIcon multiplayer"></i>
+                                <div class="icon-desc">
+                                    <div class="icon-desc-box"> <span class="tip tip-up"></span>
+                                        <p>Мультиплеер</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-icon"><i class="fas fa-gamepad gameIcon gamepad"></i>
+                                <div class="icon-desc">
+                                    <div class="icon-desc-box"> <span class="tip tip-up"></span>
+                                        <p>Поддержка геймпада</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-product-name">
+                    <p class="product-name">MIDDLE-EARTH: Shadow Of War </p>
+                </div>
+                <div class="buy-button-product"> <a href="#" class="gallery-buy-button-product"> Buy</a> </div>
+            </div>
+            <div class="gallery-item-product">
+                <div class="card-flip-item">
+                    <div class="card-flip-item-front"> <img src="{% static 'img/2408-1000-x-830.png' %}" alt=""> </div>
+                    <div class="card-flip-item-back">
+                        <div class="flip-rating">
+                            <div class="flip-rating-item">
+                                <p>92</p>
+                                <p>Metacritic</p>
+                            </div>
+                            <div class="flip-rating-item">
+                                <p>92</p>
+                                <p>PC Gamer</p>
+                            </div>
+                        </div>
+                        <div class="flip-price">
+                            <p>$29.99</p>
+                        </div>
+                        <div class="flip-description">
+                            <p>The plot is set in a fictional history of real world events and follows the centuries-old struggle between the Assassins, who fight for peace with free will, and the Templars, who desire peace through control. </p>
+                        </div>
+                        <div class="flip-icons">
+                            <div class="flip-icon"><i class="fas fa-user gameIcon singleplayer"></i>
+                                <div class="icon-desc">
+                                    <div class="icon-desc-box"> <span class="tip tip-up"></span>
+                                        <p>Одиночная игра</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-icon"><i class="fas fa-user-friends gameIcon multiplayer"></i>
+                                <div class="icon-desc">
+                                    <div class="icon-desc-box"> <span class="tip tip-up"></span>
+                                        <p>Мультиплеер</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-icon"><i class="fas fa-gamepad gameIcon gamepad"></i>
+                                <div class="icon-desc">
+                                    <div class="icon-desc-box"> <span class="tip tip-up"></span>
+                                        <p>Поддержка геймпада</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-product-name">
+                    <p class="product-name">DISHONORED 2 </p>
+                </div>
+                <div class="buy-button-product"> <a href="#" class="gallery-buy-button-product"> Buy</a> </div>
+            </div>
+            <div class="gallery-item-product">
+                <div class="card-flip-item">
+                    <div class="card-flip-item-front"> <img src="{% static 'img/thief-box-art.png' %}" alt=""> </div>
+                    <div class="card-flip-item-back">
+                        <div class="flip-rating">
+                            <div class="flip-rating-item">
+                                <p>92</p>
+                                <p>Metacritic</p>
+                            </div>
+                            <div class="flip-rating-item">
+                                <p>92</p>
+                                <p>PC Gamer</p>
+                            </div>
+                        </div>
+                        <div class="flip-price">
+                            <p>$29.99</p>
+                        </div>
+                        <div class="flip-description">
+                            <p>The plot is set in a fictional history of real world events and follows the centuries-old struggle between the Assassins, who fight for peace with free will, and the Templars, who desire peace through control. </p>
+                        </div>
+                        <div class="flip-icons">
+                            <div class="flip-icon"><i class="fas fa-user gameIcon singleplayer"></i>
+                                <div class="icon-desc">
+                                    <div class="icon-desc-box"> <span class="tip tip-up"></span>
+                                        <p>Одиночная игра</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-icon"><i class="fas fa-user-friends gameIcon multiplayer"></i>
+                                <div class="icon-desc">
+                                    <div class="icon-desc-box"> <span class="tip tip-up"></span>
+                                        <p>Мультиплеер</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-icon"><i class="fas fa-gamepad gameIcon gamepad"></i>
+                                <div class="icon-desc">
+                                    <div class="icon-desc-box"> <span class="tip tip-up"></span>
+                                        <p>Поддержка геймпада</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-product-name">
+                    <p class="product-name">THIEF </p>
+                </div>
+                <div class="buy-button-product"> <a href="#" class="gallery-buy-button-product"> Buy</a> </div>
+            </div>
+            <div class="gallery-item-product">
+                <div class="card-flip-item">
+                    <div class="card-flip-item-front"> <img src="{% static 'img/mpw-31317.png' %}" alt=""> </div>
+                    <div class="card-flip-item-back">
+                        <div class="flip-rating">
+                            <div class="flip-rating-item">
+                                <p>92</p>
+                                <p>Metacritic</p>
+                            </div>
+                            <div class="flip-rating-item">
+                                <p>92</p>
+                                <p>PC Gamer</p>
+                            </div>
+                        </div>
+                        <div class="flip-price">
+                            <p>$29.99</p>
+                        </div>
+                        <div class="flip-description">
+                            <p>The plot is set in a fictional history of real world events and follows the centuries-old struggle between the Assassins, who fight for peace with free will, and the Templars, who desire peace through control. </p>
+                        </div>
+                        <div class="flip-icons">
+                            <div class="flip-icon"><i class="fas fa-user gameIcon singleplayer"></i>
+                                <div class="icon-desc">
+                                    <div class="icon-desc-box"> <span class="tip tip-up"></span>
+                                        <p>Одиночная игра</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-icon"><i class="fas fa-user-friends gameIcon multiplayer"></i>
+                                <div class="icon-desc">
+                                    <div class="icon-desc-box"> <span class="tip tip-up"></span>
+                                        <p>Мультиплеер</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip-icon"><i class="fas fa-gamepad gameIcon gamepad"></i>
+                                <div class="icon-desc">
+                                    <div class="icon-desc-box"> <span class="tip tip-up"></span>
+                                        <p>Поддержка геймпада</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-product-name">
+                    <p class="product-name">HITMAN </p>
+                </div>
+                <div class="buy-button-product"> <a href="#" class="gallery-buy-button-product"> Buy</a> </div>
+            </div>
+        </div>
+    </div>
+    {% include 'mainapp/includes/inc_contacts.html' %}
+    {% include 'mainapp/includes/inc_map.html' %}
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'js/productImages.js' %}"></script>
+    <script src="{% static 'js/progressCircle.js' %}"></script>
+<!--    <script src="{% static 'js/gameIcons.js' %}"></script>-->
+{% endblock %}
