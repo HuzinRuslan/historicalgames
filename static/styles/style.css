@@ -1308,13 +1308,14 @@ input.default-input {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 562px;
 }
-.catalog-big-first {
-  background-image: url(../img/532219.png);
+.catalog-big-item {
   position: relative;
 }
-.catalog-big-second {
-  background-image: url(../img/cda-8-d-63-e-371-e-3-da-4-b-332164-c-3-da-4-ada-5.png);
-  position: relative;
+.catalog-big-image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 .catalog-big-text {
   position: absolute;

@@ -1,0 +1,11 @@
+{% load my_tags %}
+
+{% for object in object_list %}
+    <div class="gallery-item-product">
+        <img src="{{ object.get_main_image|media_folder_products }}" alt="">
+        <div class="div-product-name">
+            <p class="product-name">{{ object.name }} </p>
+        </div>
+        <div class="buy-button-product-catalog"> <a href="{% url 'catalog:product' object.pk %}" class="gallery-buy-button-product"> Buy</a> </div>
+    </div>
+{% endfor %}

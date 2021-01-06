@@ -373,5 +373,65 @@
     "product": "HITMAN",
     "is_main": false,
     "image": "product_images/hitman4.jpg"
+  },
+  {
+    "product": "CALL OF DUTY: Modern Warfare 3",
+    "is_main": false,
+    "is_big": true,
+    "image": "product_images/532219.png"
+  },
+  {
+    "product": "CALL OF DUTY: Modern Warfare 3",
+    "is_main": false,
+    "is_big": false,
+    "image": "product_images/codmw31.jpg"
+  },
+  {
+    "product": "CALL OF DUTY: Modern Warfare 3",
+    "is_main": false,
+    "is_big": false,
+    "image": "product_images/codmw32.jpg"
+  },
+  {
+    "product": "CALL OF DUTY: Modern Warfare 3",
+    "is_main": false,
+    "is_big": false,
+    "image": "product_images/codmw33.jpg"
+  },
+  {
+    "product": "CALL OF DUTY: Modern Warfare 3",
+    "is_main": false,
+    "is_big": false,
+    "image": "product_images/codmw34.jpg"
+  },
+  {
+    "product": "MEDAL OF HONOR",
+    "is_main": false,
+    "is_big": true,
+    "image": "product_images/cda-8-d-63-e-371-e-3-da-4-b-332164-c-3-da-4-ada-5.png"
+  },
+  {
+    "product": "MEDAL OF HONOR",
+    "is_main": false,
+    "is_big": false,
+    "image": "product_images/moh1.jpg"
+  },
+  {
+    "product": "MEDAL OF HONOR",
+    "is_main": false,
+    "is_big": false,
+    "image": "product_images/moh2.jpg"
+  },
+  {
+    "product": "MEDAL OF HONOR",
+    "is_main": false,
+    "is_big": false,
+    "image": "product_images/moh3.jpg"
+  },
+  {
+    "product": "MEDAL OF HONOR",
+    "is_main": false,
+    "is_big": false,
+    "image": "product_images/moh4.jpg"
   }
 ]

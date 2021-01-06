@@ -43,7 +43,9 @@ class Product(models.Model):
     description = models.TextField(blank=True, verbose_name='Описание')
     price = models.DecimalField(max_digits=8, decimal_places=2, default=0)
     quantity = models.PositiveSmallIntegerField(default=0)
+    discount = models.PositiveSmallIntegerField(default=0)
     is_active = models.BooleanField(default=True)
+    is_big = models.BooleanField(default=False)
     tags = models.ManyToManyField(ProductTag)
     metacritic = models.PositiveSmallIntegerField(default=0)
     pcGamer = models.PositiveSmallIntegerField(default=0)
@@ -60,10 +62,13 @@ class Product(models.Model):
         return self.gallery.get(is_main=True).image
 
     def get_first_small_image(self):
-        return self.gallery.filter(is_main=False)[0]
+        return self.gallery.filter(is_main=False, is_big=False)[0]
 
     def get_other_small_images(self):
-        return self.gallery.filter(is_main=False)[1:]
+        return self.gallery.filter(is_main=False, is_big=False)[1:]
+
+    def get_big_image(self):
+        return self.gallery.get(is_big=True).image
 
     def get_subname(self):
         name = str(self.name)
@@ -85,10 +90,17 @@ class Product(models.Model):
         tags = self.tags.values()
         return tags
 
+    def get_new_price(self):
+        price = str(self.price)
+        discount = str(self.discount)
+
+        return float(price) - float(price) * (float(discount) / 100)
+
 
 class Gallery(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='gallery')
     is_main = models.BooleanField(default=False)
+    is_big = models.BooleanField(default=False)
     image = models.ImageField(upload_to='product_images', blank=True)
 
     class Meta:

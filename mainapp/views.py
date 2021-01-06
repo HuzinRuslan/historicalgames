@@ -1,15 +1,16 @@
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
+from django.template.loader import render_to_string
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 from mainapp.models import Product, MainSlider
 
 
 def get_similar_products(product):
-    same_products = Product.objects.filter(category_id=product.category_id).exclude(pk=product.pk).select_related(
-        'category')[:4]
+    same_products = Product.objects.exclude(pk=product.pk).exclude(gallery__is_big=True).filter(category_id=product.category_id)[:4]
     if len(same_products) < 4:
         prods_len = 4 - len(same_products)
-        new_products = Product.objects.all().exclude(category_id=product.category_id).order_by("?")[:prods_len]
+        new_products = Product.objects.exclude(category_id=product.category_id).exclude(gallery__is_big=True).order_by("?")[
+                       :prods_len]
         same_products |= new_products
     return same_products
 
@@ -34,14 +35,18 @@ def contacts(request):
     return render(request, 'mainapp/contacts.html', content)
 
 
-class CatalogView(ListView):
+class CatalogListView(ListView):
     model = Product
     template_name = 'mainapp/catalog.html'
 
+    def get_queryset(self):
+        return super().get_queryset().exclude(gallery__is_big=True)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['object_list'] = context['object_list'][4:12]
+        context['object_list'] = context['object_list'][:8]
         context['title'] = 'Каталог'
+        context['big_products'] = Product.objects.filter(gallery__is_big=True)[:2]
 
         return context
 
@@ -76,3 +81,16 @@ def main_slider(request):
         data_list.append(content)
 
     return JsonResponse(data_list, safe=False)
+
+
+def catalog_update(request, last_id):
+    if request.is_ajax():
+        products = Product.objects.filter(id__gt=last_id).exclude(gallery__is_big=True)[:4]
+
+        content = {
+            'object_list': products
+        }
+
+        result = render_to_string('mainapp/includes/inc_catalog_products.html', content)
+
+        return JsonResponse({'result': result})

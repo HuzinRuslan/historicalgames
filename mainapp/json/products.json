@@ -123,7 +123,7 @@
     "tags": [
       "Мультиплеер"
     ],
-    "metacritic": 80,
+    "metacritic": 78,
     "pcGamer": 75,
     "OpenCritic": "Alright"
   },
@@ -154,7 +154,7 @@
     "tags": [
       "Мультиплеер"
     ],
-    "metacritic": 70,
+    "metacritic": 67,
     "pcGamer": 71,
     "OpenCritic": "Alright"
   },
@@ -238,6 +238,44 @@
     ],
     "metacritic": 82,
     "pcGamer": 83,
+    "OpenCritic": "Good"
+  },
+  {
+    "name": "CALL OF DUTY: Modern Warfare 3",
+    "category": "Action",
+    "short_desc": "The plot is set in a fictional history of real world events and follows the centuries-old struggle between the Assassins, who fight for peace with free will, and the Templars, who desire peace through control.",
+    "description": "The plot is set in a fictional history of real world events and follows the centuries-old struggle between the Assassins, who fight for peace with free will, and the Templars, who desire peace through control. The story is set in the mid-18th century during the Seven Years' War, and follows Shay Patrick Cormac, an Assassin-turned-Templar who hunts down former members of his Brotherhood after being betrayed by them. Gameplay in Rogue is very similar to that of Black Flag with a mixture of ship-based naval exploration and third-person land-based exploration with some new features.",
+    "price": "1290",
+    "quantity": "5",
+    "discount": "20",
+    "is_big": true,
+    "tags": [
+      "Поддержка геймпада",
+      "Одиночная игра",
+      "Steam Cloud",
+      "Мультиплеер"
+    ],
+    "metacritic": 63,
+    "pcGamer": 67,
+    "OpenCritic": "Alright"
+  },
+  {
+    "name": "MEDAL OF HONOR",
+    "category": "Action",
+    "short_desc": "The plot is set in a fictional history of real world events and follows the centuries-old struggle between the Assassins, who fight for peace with free will, and the Templars, who desire peace through control.",
+    "description": "The plot is set in a fictional history of real world events and follows the centuries-old struggle between the Assassins, who fight for peace with free will, and the Templars, who desire peace through control. The story is set in the mid-18th century during the Seven Years' War, and follows Shay Patrick Cormac, an Assassin-turned-Templar who hunts down former members of his Brotherhood after being betrayed by them. Gameplay in Rogue is very similar to that of Black Flag with a mixture of ship-based naval exploration and third-person land-based exploration with some new features.",
+    "price": "1490",
+    "quantity": "7",
+    "discount": "20",
+    "is_big": true,
+    "tags": [
+      "Поддержка геймпада",
+      "Одиночная игра",
+      "Steam Cloud",
+      "Мультиплеер"
+    ],
+    "metacritic": 75,
+    "pcGamer": 68,
     "OpenCritic": "Good"
   }
 ]

@@ -9,8 +9,8 @@ new Vue({
         axios.get('api/slider/')
         .then((response)=>{
             console.log(response.data)
-            this.sliderItems = response.data
-        })
+            this.sliderItems = response.data;
+        });
     },
     methods:{
         leftButton(){

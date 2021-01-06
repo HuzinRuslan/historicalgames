@@ -4,6 +4,11 @@
 
 {% load my_tags %}
 
+{% block headScript %}
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/catalogUpdate.js' %}"></script>
+{% endblock %}
+
 {% block content %}
     <div class="starting-product">
         {% include 'mainapp/includes/inc_starting_search.html' %}
@@ -15,37 +20,27 @@
                 <div class="red-header"> Our Gallery </div>
             </div>
             <div class="gallery-products">
-                {% for object in object_list %}
-                <div class="gallery-item-product">
-                    <img src="{{ object.get_main_image|media_folder_products }}" alt="">
-                    <div class="div-product-name">
-                        <p class="product-name">{{ object.name }} </p>
-                    </div>
-                    <div class="buy-button-product-catalog"> <a href="{% url 'catalog:product' object.pk %}" class="gallery-buy-button-product"> Buy</a> </div>
-                </div>
-                {% endfor %}
+                {% include 'mainapp/includes/inc_catalog_products.html' %}
             </div>
             <div class="show-more-catalog-wrapper"> <a href="#" class="show-more-catalog">Show more games <i class="fas fa-chevron-right"></i></a> </div>
         </div>
     </div>
     <div class="catalog-big">
-        <div class="catalog-big-first">
+        {% for big_prod in big_products %}
+        <div class="catalog-big-item">
+            <img src="{{ big_prod.get_big_image|media_folder_products }}" alt="" class="catalog-big-image">
+
             <div class="catalog-big-text">
                 <p class="catalog-big-discount"> DISCOUNT </p>
-                <p class="catalog-big-name"> CALL OF DUTY: Modern Warfare 3 </p>
-                <p class="catalog-big-price">  <span>$14.44</span> / $28.90 </p>
-                <a href="#" class="catalog-big-buy-button">Buy</a>
+                <p class="catalog-big-name"> {{ big_prod.name }} </p>
+                <p class="catalog-big-price">  <span>{{ big_prod.get_new_price }} ₽</span> / {{ big_prod.price }} ₽</p>
+                <a href="{% url 'catalog:product' big_prod.pk %}" class="catalog-big-buy-button">Buy</a>
             </div>
         </div>
-        <div class="catalog-big-second">
-            <div class="catalog-big-text">
-                <p class="catalog-big-discount"> DISCOUNT </p>
-                <p class="catalog-big-name"> MEDAL OF HONOR </p>
-                <p class="catalog-big-price">  <span>$15.96</span> / $29.99 </p>
-                <a href="#" class="catalog-big-buy-button">Buy</a>
-            </div>
-        </div>
+        {% endfor %}
     </div>
     {% include 'mainapp/includes/inc_contacts.html' %}
     {% include 'mainapp/includes/inc_map.html' %}
 {% endblock %}
+
+
