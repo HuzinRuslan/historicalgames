@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load my_tags %}
+
 {% block content %}
     <div class="starting-product">
         {% include 'mainapp/includes/inc_starting_search.html' %}
@@ -13,54 +15,15 @@
                 <div class="red-header"> Our Gallery </div>
             </div>
             <div class="gallery-products">
-                <div class="gallery-item-product"> <img src="{% static 'img/71-h-xk-6-m-9-l-sy-606.png' %}" alt="">
+                {% for object in object_list %}
+                <div class="gallery-item-product">
+                    <img src="{{ object.get_main_image|media_folder_products }}" alt="">
                     <div class="div-product-name">
-                        <p class="product-name">BATTLEFIELD 1 </p>
+                        <p class="product-name">{{ object.name }} </p>
                     </div>
-                    <div class="buy-button-product-catalog"> <a href="#" class="gallery-buy-button-product"> Buy</a> </div>
+                    <div class="buy-button-product-catalog"> <a href="{% url 'catalog:product' object.pk %}" class="gallery-buy-button-product"> Buy</a> </div>
                 </div>
-                <div class="gallery-item-product"> <img src="{% static 'img/71-v-3-s-nj-wt-rl-sy-450.png' %}" alt="">
-                    <div class="div-product-name">
-                        <p class="product-name">STAR WARS: Battlefront II</p>
-                    </div>
-                    <div class="buy-button-product-catalog"> <a href="#" class="gallery-buy-button-product"> Buy</a> </div>
-                </div>
-                <div class="gallery-item-product"> <img src="{% static 'img/81-vnxn-cj-fe-l-sy-606.png' %}" alt="">
-                    <div class="div-product-name">
-                        <p class="product-name">BATTLEFIELD 4</p>
-                    </div>
-                    <div class="buy-button-product-catalog"> <a href="#" class="gallery-buy-button-product"> Buy</a> </div>
-                </div>
-                <div class="gallery-item-product"> <img src="{% static 'img/1500209931-world-of-tanks-trojka-is-t-34-i-su-152.png' %}" alt="">
-                    <div class="div-product-name">
-                        <p class="product-name">WORLD OF TANKS</p>
-                    </div>
-                    <div class="buy-button-product-catalog"> <a href="#" class="gallery-buy-button-product"> Buy</a> </div>
-                </div>
-                <div class="gallery-item-product"> <img src="{% static 'img/mv-5-bn-thl-z-dll-zw-mt-m-2-ey-mi-00-zwq-1-l-tgy-nm-yt-yw-jm-zg-rk-y-2-q-2-yte-2-xk-ey-xk-fqc-gde-qx-vy-nd-mz-oda-1-oti-v-1.png' %}" alt="">
-                    <div class="div-product-name">
-                        <p class="product-name">ASSASSIN'S CREED: Rogue</p>
-                    </div>
-                    <div class="buy-button-product-catalog"> <a href="#" class="gallery-buy-button-product"> Buy</a> </div>
-                </div>
-                <div class="gallery-item-product"> <img src="{% static 'img/mv-5-bzg-yx-mg-jm-mt-ut-ywu-3-yy-00-mt-rj-lw-jl-zg-it-ot-jh-njhm-nt-nl-mti-1-xk-ey-xk-fqc-gde-qx-vy-mtm-1-n-tkz-ota-v-1-uy-268-cr-44-0-182-268-al.png' %}" alt="">
-                    <div class="div-product-name">
-                        <p class="product-name">FOR HONOR</p>
-                    </div>
-                    <div class="buy-button-product-catalog"> <a href="#" class="gallery-buy-button-product"> Buy</a> </div>
-                </div>
-                <div class="gallery-item-product"> <img src="{% static 'img/world-of-warships.png' %}" alt="">
-                    <div class="div-product-name">
-                        <p class="product-name">WORLD OF WARSHIPS</p>
-                    </div>
-                    <div class="buy-button-product-catalog"> <a href="#" class="gallery-buy-button-product"> Buy</a> </div>
-                </div>
-                <div class="gallery-item-product"> <img src="{% static 'img/51-p-1-z-v-mzq-3-l.png' %}" alt="">
-                    <div class="div-product-name">
-                        <p class="product-name">CALL OF DUTY: Infinite Warface</p>
-                    </div>
-                    <div class="buy-button-product-catalog"> <a href="#" class="gallery-buy-button-product"> Buy</a> </div>
-                </div>
+                {% endfor %}
             </div>
             <div class="show-more-catalog-wrapper"> <a href="#" class="show-more-catalog">Show more games <i class="fas fa-chevron-right"></i></a> </div>
         </div>

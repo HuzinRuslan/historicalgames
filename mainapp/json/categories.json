@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Action"
+  },
+  {
+    "name": "Action-adventure"
+  },
+  {
+    "name": "Adventure"
+  },
+  {
+    "name": "Fighting"
+  },
+  {
+    "name": "God game"
+  },
+  {
+    "name": "Puzzle"
+  },
+  {
+    "name": "Role-playing"
+  },
+  {
+    "name": "Action role-playing"
+  },
+  {
+    "name": "Sports"
+  },
+  {
+    "name": "Stealth"
+  },
+  {
+    "name": "Strategy"
+  },
+  {
+    "name": "Horror"
+  },
+    {
+    "name": "MMORPG"
+  }
+]

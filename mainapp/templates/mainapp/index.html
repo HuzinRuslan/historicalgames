@@ -2,6 +2,13 @@
 
 {% load static %}
 
+{% load my_tags %}
+
+{% block headScript %}
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+{% endblock %}
+
 {% block content %}
     <div class="starting-div">
         {% include 'mainapp/includes/inc_starting_search.html' %}
@@ -10,7 +17,7 @@
                 <li> <a href="{% url 'main' %}">Home</a> </li>
                 <li> <a href="#">About</a> </li>
                 <li> <a href="#">Services</a> </li>
-                <li> <a href="{% url 'catalog' %}">Gallery</a> </li>
+                <li> <a href="{% url 'catalog:index' %}">Gallery</a> </li>
                 <li> <a href="#">News</a> </li>
                 <li> <a href="#">Team</a> </li>
                 <li> <a href="{% url 'contacts' %}">Contact Us</a> </li>
@@ -107,47 +114,17 @@
             <div class="red-header"> Our Gallery </div>
         </div>
         <div class="gallery-products-main">
-            <div class="gallery-item"> <img src="{% static 'img/71-ivm-50-pp-7-l-sl-1273-1024-x-1024-2-x.png' %}" alt="">
+            {% for object in object_list %}
+            <div class="gallery-item"> <img src="{{ object.get_main_image|media_folder_products }}" alt="">
                 <div class="div-product-name">
-                    <p class="product-name">Assasin’s Creed: Rogue </p>
-                    <div class="buy-button"> <a href="{% url 'product' %}" class="gallery-buy-button"> Buy</a> </div>
+                    <p class="product-name">{{ object.name }} </p>
+                    <div class="buy-button"> <a href="{% url 'catalog:product' object.pk %}" class="gallery-buy-button"> Buy</a> </div>
                 </div>
             </div>
-            <div class="gallery-item"> <img src="{% static 'img/51-k-8-ff-z-39-a-l.png' %}" alt="">
-                <div class="div-product-name">
-                    <p class="product-name">Tomb Raider </p>
-                    <div class="buy-button"> <a href="{% url 'product' %}" class="gallery-buy-button"> Buy</a> </div>
-                </div>
-            </div>
-            <div class="gallery-item"> <img src="{% static 'img/fc-0-fe-7-ba-3-b-8-e-092-e-2-ae-941-b-054852-d-47.png' %}" alt="">
-                <div class="div-product-name">
-                    <p class="product-name">Ryse: Son Of Rome </p>
-                    <div class="buy-button"> <a href="{% url 'product' %}" class="gallery-buy-button"> Buy</a> </div>
-                </div>
-            </div>
-            <div class="gallery-item"> <img src="{% static 'img/91-fv-ox-ym-fn-l.png' %}" alt="">
-                <div class="div-product-name">
-                    <p class="product-name">World Of Warcraft: Wrath Of The Linch King </p>
-                    <div class="buy-button"> <a href="{% url 'product' %}" class="gallery-buy-button"> Buy</a> </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
-    <div class="quote">
-        <div class="quote-header">
-            <p>Testimonial</p>
-        </div>
-        <div class="quote-icon"> <img src="{% static 'img/2.png' %}" alt=""> </div>
-        <div class="quote-content">
-            <a href="#" class="arrow-left"><img src="{% static 'img/left-arrow.png' %}" alt=""></a>
-            <div class="quote-text"> Donec feugiat tellus sem, laoreet iaculis orci lobortis vel. Sed sed luctus orci, at lacinia risus. Ut porttitor ante ac tincidunt elementum. Curabitur ex dolor, condimentum vitae nunc vel, pulvinar semper justo. Vestibulum et aliquet magna, maximus dapibus enim. Vestibulum ex lectus, posuere eu viverra at, mattis et enim. Nam efficitur sem et lectus fringilla, at pharetra nulla luctus. Nunc cursus, augue ac ultricies volutpat, neque erat congue justo, ac pretium tellus eros a neque. Integer ipsum sem, consectetur a mollis ac, cursus eu ipsum. </div>
-            <a href="#" class="arrow-right"><img src="{% static 'img/right-arrow.png' %}" alt=""></a>
-        </div>
-        <div class="quote-signature">
-            <p> JOHN SMITH </p>
-            <p> - FOUNDER</p>
-        </div>
-    </div>
+    {% include 'mainapp/includes/inc_main_vue_slider.html' %}
     <div class="news-events">
         <div class="news-events-header">News & Events</div>
         <div class="news-events-content">
@@ -311,4 +288,5 @@
 
 {% block script %}
     <script src="{% static 'js/collapseMain.js' %}"></script>
+    <script src="{% static 'js/mainSliderVue.js' %}"></script>
 {% endblock %}

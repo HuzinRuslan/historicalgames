@@ -273,5 +273,105 @@
     "product": "CALL OF DUTY: Infinite Warfare",
     "is_main": false,
     "image": "product_images/codi4.jpg"
+  },
+  {
+    "product": "MIDDLE-EARTH: Shadow Of War",
+    "is_main": true,
+    "image": "product_images/81-pp-b-9-h-hu-7-l-sl-1500-1024-x-1024-2-x.png"
+  },
+  {
+    "product": "MIDDLE-EARTH: Shadow Of War",
+    "is_main": false,
+    "image": "product_images/middle1.jpg"
+  },
+  {
+    "product": "MIDDLE-EARTH: Shadow Of War",
+    "is_main": false,
+    "image": "product_images/middle2.jpg"
+  },
+  {
+    "product": "MIDDLE-EARTH: Shadow Of War",
+    "is_main": false,
+    "image": "product_images/middle3.jpg"
+  },
+  {
+    "product": "MIDDLE-EARTH: Shadow Of War",
+    "is_main": false,
+    "image": "product_images/middle4.jpg"
+  },
+  {
+    "product": "DISHONORED 2",
+    "is_main": true,
+    "image": "product_images/2408-1000-x-830.png"
+  },
+  {
+    "product": "DISHONORED 2",
+    "is_main": false,
+    "image": "product_images/dis1.jpg"
+  },
+  {
+    "product": "DISHONORED 2",
+    "is_main": false,
+    "image": "product_images/dis2.jpg"
+  },
+  {
+    "product": "DISHONORED 2",
+    "is_main": false,
+    "image": "product_images/dis3.jpg"
+  },
+  {
+    "product": "DISHONORED 2",
+    "is_main": false,
+    "image": "product_images/dis4.jpg"
+  },
+  {
+    "product": "THIEF",
+    "is_main": true,
+    "image": "product_images/thief-box-art.png"
+  },
+  {
+    "product": "THIEF",
+    "is_main": false,
+    "image": "product_images/thief1.jpg"
+  },
+  {
+    "product": "THIEF",
+    "is_main": false,
+    "image": "product_images/thief2.jpg"
+  },
+  {
+    "product": "THIEF",
+    "is_main": false,
+    "image": "product_images/thief3.jpg"
+  },
+  {
+    "product": "THIEF",
+    "is_main": false,
+    "image": "product_images/thief4.jpg"
+  },
+  {
+    "product": "HITMAN",
+    "is_main": true,
+    "image": "product_images/mpw-31317.png"
+  },
+  {
+    "product": "HITMAN",
+    "is_main": false,
+    "image": "product_images/hitman1.jpg"
+  },
+  {
+    "product": "HITMAN",
+    "is_main": false,
+    "image": "product_images/hitman2.jpg"
+  },
+  {
+    "product": "HITMAN",
+    "is_main": false,
+    "image": "product_images/hitman3.jpg"
+  },
+  {
+    "product": "HITMAN",
+    "is_main": false,
+    "image": "product_images/hitman4.jpg"
   }
 ]

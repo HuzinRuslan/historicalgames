@@ -1,0 +1,25 @@
+{% load static %}
+
+<div class="quote" id="slider_main_app">
+    <div v-for="slider in sliderItems" v-bind:class="{'slide-item':true,'active':(slider.id == currentSlide)}">
+        <img :src="[[ /media/ + slider.back_image ]]" alt="" class="quote-image">
+        <div class="quote-header">
+            <p>[[ slider.header ]]</p>
+        </div>
+        <div class="quote-icon"><img src="{% static 'img/2.png' %}" alt=""></div>
+        <div class="quote-content">
+            <div class="arrow-left" v-on:click="leftButton">
+                <img src="{% static 'img/left-arrow.png' %}" alt="">
+            </div>
+            <div class="quote-text"> [[ slider.text ]]
+            </div>
+            <div class="arrow-right" v-on:click="rightButton">
+                <img src="{% static 'img/right-arrow.png' %}" alt="">
+            </div>
+        </div>
+        <div class="quote-signature">
+            <p> [[ slider.short_text ]]</p>
+        </div>
+    </div>
+
+</div>

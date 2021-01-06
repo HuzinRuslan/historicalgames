@@ -455,14 +455,26 @@ a {
     margin-top: 20px;
 }
 
+.slide-item {
+    animation: .7s fade-in;
+    display: none;
+}
+
 .quote {
-    background-repeat: no-repeat;
-    background-image: url(../img/3.png);
-    padding-top: 85px;
-    padding-bottom: 70px;
+    position: relative;
+}
+
+.quote-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 1923px;
+    height: 537px;
 }
 
 .quote-header {
+    padding-top: 85px;
     color: #ffffff;
     font-size: 48px;
     font-family: 'Poppins', sans-serif;
@@ -490,6 +502,7 @@ a {
 }
 
 .quote-signature {
+    padding-bottom: 70px;
     .flex-center
 }
 
@@ -515,6 +528,7 @@ a {
     align-items: center;
     height: 37px;
     width: 37px;
+    cursor: pointer;
 }
 
 .arrow-right {
@@ -525,6 +539,7 @@ a {
     align-items: center;
     height: 37px;
     width: 37px;
+    cursor: pointer;
 }
 
 .new {
@@ -704,6 +719,10 @@ a {
 
 .inactive {
     display: none;
+}
+
+.active {
+    display: block;
 }
 
 .collapse-item-header {
@@ -1641,5 +1660,23 @@ input.default-input {
     }
     to {
         transform: translateX(10em) skewX(-45deg);
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
     }
 }

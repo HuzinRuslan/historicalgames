@@ -34,7 +34,6 @@ let progressCirclePart = {
         this.circle4.style.strokeDasharray = `${this.part} ${this.circumference - this.part}`;
 
         this.setProgress(this.score)
-        console.log(this.score)
     },
     setProgress(percent) {
         if (percent == "Bad"){
