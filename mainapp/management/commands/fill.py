@@ -2,9 +2,9 @@ import json
 import os
 
 from django.conf import settings
-from django.contrib.auth.models import User
 from django.core.management.base import BaseCommand
 
+from authapp.models import ShopUser
 from mainapp.models import Product, ProductTag, Gallery, MainSlider, ProductCategory
 
 FILE_PATH = os.path.join(settings.BASE_DIR, 'mainapp/json')
@@ -63,4 +63,4 @@ class Command(BaseCommand):
         for slider in sliders:
             MainSlider.objects.create(**slider)
 
-        User.objects.create_superuser(username='django', password='geekbrains')
+        ShopUser.objects.create_superuser(username='django', password='geekbrains', age='21')
