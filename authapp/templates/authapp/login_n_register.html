@@ -1,0 +1,35 @@
+{% extends 'authapp/base.html' %}
+
+{% block loginForm %}
+
+<h2 class="auth-h2">Sign in/up Form</h2>
+<div class="login-container" id="container">
+	<div class="form-container sign-up-container">
+		<div id="reg_form">
+			{% include 'authapp/reg_form.html' %}
+		</div>
+		<button id="reg_confirm" class="auth-btn">Sign Up</button>
+	</div>
+	<div class="form-container sign-in-container">
+		<div id="log_form_div">
+			{% include 'authapp/login_form.html' %}
+		</div>
+		<button class="auth-btn" id="log_confirm">Sign In</button>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1 class="auth-h1">Welcome Back!</h1>
+				<p class="auth-p">To keep connected with us please login with your personal info</p>
+				<button class="ghost auth-btn" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1 class="auth-h1">Hello, Friend!</h1>
+				<p class="auth-p">Enter your personal details and start journey with us</p>
+				<button class="ghost auth-btn" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
