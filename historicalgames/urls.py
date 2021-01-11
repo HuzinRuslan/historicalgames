@@ -11,6 +11,7 @@ urlpatterns = [
     path('contacts/', mainapp.contacts, name='contacts'),
     path('catalog/', include('mainapp.urls', namespace='catalog')),
     path('auth/', include('authapp.urls', namespace='auth')),
+    path('cart/', include('cart.urls', namespace='cart')),
 
     path('api/slider/', mainapp.main_slider, name='slider'),
 

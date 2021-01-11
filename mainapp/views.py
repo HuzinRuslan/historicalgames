@@ -1,16 +1,19 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, request
 from django.shortcuts import render, get_object_or_404
 from django.template.loader import render_to_string
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
+
+from cart.cart import Cart
 from mainapp.models import Product, MainSlider
 
 
 def get_similar_products(product):
-    same_products = Product.objects.exclude(pk=product.pk).exclude(gallery__is_big=True).filter(category_id=product.category_id)[:4]
+    same_products = Product.objects.exclude(pk=product.pk).exclude(gallery__is_big=True).filter(
+        category_id=product.category_id)[:4]
     if len(same_products) < 4:
         prods_len = 4 - len(same_products)
-        new_products = Product.objects.exclude(category_id=product.category_id).exclude(gallery__is_big=True).order_by("?")[
-                       :prods_len]
+        new_products = Product.objects.exclude(category_id=product.category_id).exclude(gallery__is_big=True).order_by(
+            "?")[:prods_len]
         same_products |= new_products
     return same_products
 
@@ -21,15 +24,20 @@ class Main(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        cart = Cart(self.request)
         context['object_list'] = context['object_list'][:4]
         context['title'] = 'Главная'
+        context['cart'] = cart
 
         return context
 
 
 def contacts(request):
+    cart = Cart(request)
+
     content = {
-        'title': 'Контакты'
+        'title': 'Контакты',
+        'cart': cart
     }
 
     return render(request, 'mainapp/contacts.html', content)
@@ -44,24 +52,28 @@ class CatalogListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        cart = Cart(self.request)
         context['object_list'] = context['object_list'][:8]
         context['title'] = 'Каталог'
         context['big_products'] = Product.objects.filter(gallery__is_big=True)[:2]
+        context['cart'] = cart
 
         return context
 
 
 def product(request, pk=None):
+    cart = Cart(request)
+
     product_item = get_object_or_404(Product, pk=pk)
 
     similar_products = get_similar_products(product_item)
 
     title = product_item.name
-
     content = {
         'title': title,
         'product': product_item,
-        "similar_products": similar_products
+        "similar_products": similar_products,
+        'cart': cart
     }
 
     return render(request, 'mainapp/product.html', content)

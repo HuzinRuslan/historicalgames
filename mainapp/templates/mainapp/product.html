@@ -17,7 +17,7 @@
                 <div class="product-grid-buy-subname">{{ product.get_subname }}</div>
                 <div class="product-grid-buy-price"> {{ product.get_new_price }}₽ </div>
                 <div class="product-grid-buy-button">
-                    <a href="#"></a><span class="product-grid-buy-button-link">Buy</span> </div>
+                    <a href="{% url 'cart:cart_add' product.id %}"></a><span class="product-grid-buy-button-link">Buy</span> </div>
             </div>
             <div class="product-grid-images">
                 <img src="{{ product.get_first_small_image.image|media_folder_products }}" alt="" class="small-image active-product-image">

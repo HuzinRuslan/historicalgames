@@ -1,0 +1,57 @@
+<div class="cart-products">
+    <div class="code-input">
+        <p>Enter a promotional code</p>
+        <div class="code-input-div">
+            <input type="text">
+            <button>Apply</button>
+        </div>
+    </div>
+    <div class="cart-headers-grid">
+        <p>Item</p>
+        <p>Price</p>
+        <p>Quantity</p>
+        <p>Subtotal</p>
+    </div>
+    <div class="cart-products-grid">
+      {% for item in cart %}
+        {% with product=item.product %}
+          <div class="cart-product-item">
+              <div class="product-item-info"><a href="{{ product.product_url }}">
+                  <img src="/media/{{ product.image }}" width="120">
+                </a>
+                  <div class="product-item-text">
+                      <p>{{ product.product_name }}</p>
+                      <br>
+                      <p>{{ product.product_name }}</p>
+                      <br>
+                      <p>{{ product.product_name }}</p>
+                  </div>
+              </div>
+          </div>
+          <div class="cart-product-price">
+              <p>{{ item.price }} ₽</p>
+          </div>
+          <div class="cart-product-quantity">
+              <input type="number" name="{{ product.product_id }}" value="{{ item.quantity }}" min="0" class="product-quantity-input">
+          </div>
+          <div class="cart-product-subtotal">
+              <p>{{ item.total_price }} ₽</p>
+              <a href="{% url 'cart:cart_remove' product.product_id %}" style="width: 14px"><i class="fas fa-trash-alt"></i></a>
+          </div>
+        {% endwith %}
+      {% endfor %}
+    </div>
+</div>
+<div class="cart-info">
+    <p>{{ cart|length }} Items in your Bag</p>
+    <div class="subtotal-div">
+        <p>Subtotal</p>
+        <p>{{ cart.get_total_price }} ₽</p>
+    </div>
+    <div class="order-button-div">
+        <a href="#" class="order-button">Checkout</a>
+    </div>
+</div>
+
+
+

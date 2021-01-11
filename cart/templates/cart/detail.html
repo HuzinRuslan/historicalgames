@@ -1,0 +1,26 @@
+{% extends 'cart/base.html' %}
+
+{% load static %}
+
+{% load my_tags %}
+
+{% block headScript %}
+  <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="starting-product">
+        {% include 'mainapp/includes/inc_starting_search.html' %}
+        {% include 'mainapp/includes/inc_starting_menu_product.html' %}
+    </div>
+    <h1>Корзина покупок</h1>
+    <div class="cart-wrapper">
+        {% include 'cart/includes/inc_cart_list.html' %}
+
+    </div>
+{% endblock %}
+
+
+{% block script %}
+    <script src="{% static 'js/cartScript.js' %}"></script>
+{% endblock %}

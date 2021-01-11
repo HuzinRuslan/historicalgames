@@ -17,5 +17,12 @@
         {% if user.is_superuser %}
             <li><a href="/admin/">Admin</a></li>
         {% endif %}
+        <li><a href="{% url 'cart:cart_detail' %}">
+            {% if cart|length > 0 %}
+                <i class="fas fa-shopping-cart"></i>{{ cart|length }} шт, {{ cart.get_total_price }}₽
+            {% else %}
+                Корзина пуста
+            {% endif %}
+        </a></li>
     </ul>
 </div>

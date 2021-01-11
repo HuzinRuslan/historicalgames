@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class ProductCategory(models.Model):
@@ -96,6 +97,8 @@ class Product(models.Model):
 
         return float(price) - float(price) * (float(discount) / 100)
 
+    def get_absolute_url(self):
+        return reverse('catalog:product', args=[self.id])
 
 class Gallery(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='gallery')
