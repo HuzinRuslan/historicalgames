@@ -35,7 +35,8 @@ class Cart(object):
 
         product_id = str(product.id)
         if product_id not in self.cart:
-            self.cart[product_id] = {'quantity': 0, 'price': float(product.price)}
+            price = product.get_new_price()
+            self.cart[product_id] = {'quantity': 0, 'price': price}
 
         if update_quantity:
             self.cart[product_id]['quantity'] = quantity

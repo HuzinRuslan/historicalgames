@@ -8,12 +8,10 @@ from mainapp.models import Product, MainSlider
 
 
 def get_similar_products(product):
-    same_products = Product.objects.exclude(pk=product.pk).exclude(gallery__is_big=True).filter(
-        category_id=product.category_id)[:4]
+    same_products = Product.objects.exclude(pk=product.pk).filter(category_id=product.category_id)[:4]
     if len(same_products) < 4:
         prods_len = 4 - len(same_products)
-        new_products = Product.objects.exclude(category_id=product.category_id).exclude(gallery__is_big=True).order_by(
-            "?")[:prods_len]
+        new_products = Product.objects.exclude(category_id=product.category_id).order_by("?")[:prods_len]
         same_products |= new_products
     return same_products
 
@@ -46,9 +44,6 @@ def contacts(request):
 class CatalogListView(ListView):
     model = Product
     template_name = 'mainapp/catalog.html'
-
-    def get_queryset(self):
-        return super().get_queryset().exclude(gallery__is_big=True)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -97,7 +92,7 @@ def main_slider(request):
 
 def catalog_update(request, last_id):
     if request.is_ajax():
-        products = Product.objects.filter(id__gt=last_id).exclude(gallery__is_big=True)[:4]
+        products = Product.objects.filter(id__gt=last_id)[:4]
 
         content = {
             'object_list': products

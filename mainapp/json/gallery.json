@@ -380,6 +380,12 @@
     "is_big": true,
     "image": "product_images/532219.png"
   },
+    {
+    "product": "CALL OF DUTY: Modern Warfare 3",
+    "is_main": true,
+    "is_big": false,
+    "image": "product_images/codmwMain.jpg"
+  },
   {
     "product": "CALL OF DUTY: Modern Warfare 3",
     "is_main": false,
@@ -410,6 +416,12 @@
     "is_big": true,
     "image": "product_images/cda-8-d-63-e-371-e-3-da-4-b-332164-c-3-da-4-ada-5.png"
   },
+    {
+    "product": "MEDAL OF HONOR",
+    "is_main": true,
+    "is_big": false,
+    "image": "product_images/mohMain.jpg"
+  },
   {
     "product": "MEDAL OF HONOR",
     "is_main": false,
@@ -434,4 +446,6 @@
     "is_big": false,
     "image": "product_images/moh4.jpg"
   }
+
+
 ]

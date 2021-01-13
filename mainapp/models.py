@@ -100,6 +100,7 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse('catalog:product', args=[self.id])
 
+
 class Gallery(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='gallery')
     is_main = models.BooleanField(default=False)
