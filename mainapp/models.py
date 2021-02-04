@@ -40,7 +40,7 @@ class Product(models.Model):
 
     name = models.CharField(max_length=512, verbose_name='имя')
     category = models.ForeignKey(ProductCategory, on_delete=models.CASCADE, default="")
-    short_desc = models.CharField(max_length=512, blank=True)
+    short_desc = models.CharField(max_length=2048, blank=True)
     description = models.TextField(blank=True, verbose_name='Описание')
     price = models.DecimalField(max_digits=8, decimal_places=2, default=0)
     quantity = models.PositiveSmallIntegerField(default=0)
@@ -114,8 +114,8 @@ class Gallery(models.Model):
 
 
 class MainSlider(models.Model):
-    header = models.CharField(max_length=512, verbose_name='Заголовок')
-    text = models.CharField(max_length=512, verbose_name='Текст')
+    header = models.CharField(max_length=2048, verbose_name='Заголовок')
+    text = models.CharField(max_length=2048, verbose_name='Текст')
     short_text = models.CharField(max_length=256, verbose_name='Короткий текст', blank=True)
     image = models.ImageField(max_length=2048, upload_to='product_images', blank=True)
     back_image = models.ImageField(max_length=2048, upload_to='product_images')
