@@ -117,5 +117,5 @@ class MainSlider(models.Model):
     header = models.CharField(max_length=512, verbose_name='Заголовок')
     text = models.CharField(max_length=512, verbose_name='Текст')
     short_text = models.CharField(max_length=256, verbose_name='Короткий текст', blank=True)
-    image = models.ImageField(upload_to='product_images', blank=True)
-    back_image = models.ImageField(upload_to='product_images')
+    image = models.ImageField(max_length=2048, upload_to='product_images', blank=True)
+    back_image = models.ImageField(max_length=2048, upload_to='product_images')
