@@ -50,7 +50,8 @@ class Product(models.Model):
     tags = models.ManyToManyField(ProductTag)
     metacritic = models.PositiveSmallIntegerField(default=0)
     pcGamer = models.PositiveSmallIntegerField(default=0)
-    OpenCritic = models.CharField(max_length=16, choices=RATING_CHOICES, verbose_name='Оценка OpenCritic', default=BAD)
+    OpenCritic = models.CharField(max_length=16, choices=RATING_CHOICES,
+                                  verbose_name='Оценка OpenCritic', default=BAD)
 
     class Meta:
         verbose_name = 'Продукт'
@@ -109,7 +110,7 @@ class Gallery(models.Model):
 
     class Meta:
         verbose_name = 'Галлерея'
-        verbose_name_plural = 'Галлерея'
+        verbose_name_plural = 'Галлереи'
 
 
 class MainSlider(models.Model):
